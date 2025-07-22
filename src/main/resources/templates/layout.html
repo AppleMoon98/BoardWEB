@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+<!-- sbb CSS -->
+<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+<link
+	href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css"
+	rel="stylesheet">
+
+<title>게시판</title>
+</head>
+<body>
+	<!-- 네비바 -->
+	<nav th:replace="~{navbar :: ${navbarFrgment}}"></nav>
+
+	<!-- 기본 템플릿 안에 삽입될 내용 시작 -->
+	<th:block layout:fragment="content"></th:block>
+	<!-- 기본 템플릿 안에 삽입될 내용 종료 -->
+
+	<!-- Bootstrap JS -->
+	<script type="text/javascript" th:src="@{/bootstrap.min.js}"></script>
+	
+	<!-- script -->
+	<th:block layout:fragment="script"></th:block>
+</body>
+</html>
